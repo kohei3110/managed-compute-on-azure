@@ -1,0 +1,20 @@
+subscription_id               = "REPLACE_WITH_SUBSCRIPTION_UUID"
+location                      = "REPLACE_WITH_SUPPORTED_REGION"
+name_prefix                   = "REPLACE_WITH_UNIQUE_LOWERCASE_PREFIX"
+inference_principal_object_id = "REPLACE_WITH_ENTRA_OBJECT_UUID"
+
+deploy_model = false
+
+# Keep these null for the foundation-only deployment.
+# Pin the model to a verified version from your Foundry model card.
+# The template must use labels/latest; the service rejects versioned templates.
+# Check the resolved template version, compatibility, and GPU count before apply.
+model_id               = null
+deployment_template_id = null
+accelerator_type       = null
+model_instance_count   = 1
+deployment_name        = "qwen-demo"
+
+tags = {
+  environment = "demo"
+}
